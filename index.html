@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Font Awesome CDN -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sayem's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 🔹 NAVIGATION BAR -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="images/logo.png" alt="Logo" class="logo" />
+      </div>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="hamburger" onclick="openmenu()">☰</div>
+
+      <!-- Right Nav Items -->
+      <ul class="nav-right" id="sidemenu">
+        <!-- Close Button at the top -->
+        <li><div class="closemenu" onclick="closemenu()">✖</div></li>
+
+        <!-- Menu Links -->
+        <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+        <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+        <li>
+          <a href="#activities" onclick="scrollToSection('activities')"
+            >Activities</a
+          >
+        </li>
+        <li>
+          <a href="#rewards" onclick="scrollToSection('rewards')">Rewards</a>
+        </li>
+        <li>
+          <a href="#projects" onclick="scrollToSection('projects')">Projects</a>
+        </li>
+        <li>
+          <a href="#education" onclick="scrollToSection('education')"
+            >Education</a
+          >
+        </li>
+        <li>
+          <a href="#certification" onclick="scrollToSection('certification')"
+            >Certification</a
+          >
+        </li>
+        <li>
+          <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+        </li>
+
+        <!-- Light/Dark Toggle Inside Menu -->
+        <li>
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider round"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 🔹 Home SECTION -->
+    <section id="home" class="home-section">
+      <div class="home-content">
+        <img src="images/sayem.jpeg" alt="Sayem" class="profile-pic" />
+        <h1 class="greeting animate">Assalamualaikum</h1>
+        <h2>I am <span class="highlight">Sayem</span></h2>
+        <h3 class="typing" id="typing-text"></h3>
+      </div>
+    </section>
+    <!-- 🔹 ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-container">
+        <!-- 🔁 Swap order: image first, then text -->
+        <div class="about-image">
+          <img src="images/me.jpg" alt="Sayem" />
+        </div>
+        <div class="about-text">
+          <p>
+            Myself Md Abu Sayem Rony, a 3rd year student of Institute of
+            Information Technology in Jahangirnagar University. From the
+            beginning of my university journey, I am actively doing competitive
+            programming and enjoying it with attending online and offsite
+            programming contests. I have touched some milestone like reaching
+            <span class="blue">Expert</span> in Codeforces,
+            <span class="brown">5 star</span> in CodeChef,
+            <span class="green">Green coder</span> in AtCoder. I'm also
+            exploring development tools according to my thirst to make a better
+            version.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="activities" class="activities-section page-section">
+      <h2 class="section-title">Competitive Programming</h2>
+      <div class="activities-grid">
+        <!-- Box 1 -->
+        <div
+          class="activity-card"
+          onclick="window.open('https://codeforces.com/profile/SAYEM_19')"
+        >
+          <img src="images/cf.png" alt="Codeforces" />
+          <h3>Codeforces</h3>
+          <p class="count" data-count="2775">0+</p>
+          <a href="https://codeforces.com/profile/SAYEM_19" target="_blank"
+            >My Profile</a
+          >
+        </div>
+
+        <!-- Box 2 -->
+        <div
+          class="activity-card"
+          onclick="window.open('https://www.codechef.com/users/sayem_18')"
+        >
+          <img src="images/cc.png" alt="Codechef" />
+          <h3>Codechef</h3>
+          <p class="count" data-count="170">0+</p>
+          <a href="https://www.codechef.com/users/sayem_18" target="_blank"
+            >My Profile</a
+          >
+        </div>
+
+        <!-- Box 3 -->
+        <div
+          class="activity-card"
+          onclick="window.open('https://atcoder.jp/users/sayem_16')"
+        >
+          <img src="images/at.png" alt="AtCoder" />
+          <h3>AtCoder</h3>
+          <p class="count" data-count="150">0+</p>
+          <a href="https://atcoder.jp/users/sayem_18" target="_blank"
+            >My Profile</a
+          >
+        </div>
+
+        <!-- Box 4 -->
+        <div
+          class="activity-card"
+          onclick="window.open('https://cses.fi/user/169530/')"
+        >
+          <img src="images/cses.png" alt="CSES" />
+          <h3>CSES</h3>
+          <p class="count" data-count="200">0+</p>
+          <a href="https://cses.fi/user/169530/" target="_blank">My Profile</a>
+        </div>
+
+        <!-- Box 5 -->
+        <div
+          class="activity-card"
+          onclick="window.open('https://lightoj.com/user/sayem_16')"
+        >
+          <img src="images/loj.png" alt="LightOj" />
+          <h3>Light Oj</h3>
+          <p class="count" data-count="20">0+</p>
+          <a href="https://lightoj.com/user/sayem_16" target="_blank"
+            >My Profile</a
+          >
+        </div>
+
+        <!-- Box 6 -->
+        <div
+          class="activity-card"
+          onclick="window.open('https://vjudge.net/user/SAYEM__RONY')"
+        >
+          <img src="images/vj.png" alt="Vjudge" />
+          <h3>Vjudge</h3>
+          <p class="count" data-count="860">0+</p>
+          <a href="https://vjudge.net/user/SAYEM__RONY" target="_blank"
+            >My Profile</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="rewards" class="rewards-section page-section">
+      <h2 class="section-title">Rewards</h2>
+
+      <div class="rewards-subtitle">Online Platform</div>
+      <div class="rewards-grid">
+        <!-- Boxes 1 to 7 -->
+        <div class="reward-card">
+          <img src="images/cfr.png" alt="Codeforces" />
+          <h3>Codeforces Round 1014 Div.2</h3>
+          <span class="reward-badge blue">Ranked 1122nd Globally</span>
+        </div>
+        <div class="reward-card">
+          <img src="images/atr.png" alt="AtCoder" />
+          <h3>AtCoder Beginner 388</h3>
+          <span class="reward-badge green">Ranked 10th in BD</span>
+        </div>
+        <div class="reward-card">
+          <img src="images/ccr.png" alt="Codechef" />
+          <h3>Codechef Starter 175 Div.2</h3>
+          <span class="reward-badge brown">Ranked 33rd in BD</span>
+        </div>
+        <div class="reward-card">
+          <img src="images/ieee16.png" alt="IEEEXtreme" />
+          <h3>IEEEXtreme 16.0</h3>
+          <span class="reward-badge purple"
+            >Team: JU_OneMoreZer0<br />Ranked 14th in BD</span
+          >
+        </div>
+        <div class="reward-card">
+          <img src="images/ieee17.png" alt="IEEEXtreme" />
+          <h3>IEEEXtreme 17.0</h3>
+          <span class="reward-badge purple"
+            >Team: JU.1127<br />Ranked 16th in BD</span
+          >
+        </div>
+        <div class="reward-card">
+          <img src="images/ieee18.png" alt="IEEEXtreme" />
+          <h3>IEEEXtreme 18.0</h3>
+          <span class="reward-badge purple"
+            >Team: JU_StackOverflow<br />Ranked 15th in BD</span
+          >
+        </div>
+        <div class="reward-card">
+          <img src="images/icpc.png" alt="ICPC" />
+          <h3>3x ICPC Preliminary Contestant</h3>
+          <span class="reward-badge dark">Regional Selections</span>
+        </div>
+      </div>
+      <!-- 🔸 ONSITE PLATFORM SUBSECTION -->
+      <div class="rewards-subtitle">Onsite Platform</div>
+      <div class="onsite-grid">
+        <!-- Box 1 -->
+        <div class="reward-card">
+          <img src="images/uu.png" alt="UU" />
+          <h3>UU</h3>
+          <p>Team : JU_ZeroBaseIndex</p>
+          <span class="reward-badge onsite-badge"
+            >Ranked <strong>20th</strong></span
+          >
+        </div>
+
+        <!-- Box 2 -->
+        <div class="reward-card">
+          <img src="images/duet.png" alt="DUET" />
+          <h3>DUET</h3>
+          <p>Team : JU_ZeroBaseIndex</p>
+          <span class="reward-badge onsite-badge"
+            >Ranked <strong>39th</strong></span
+          >
+        </div>
+
+        <!-- Box 3 -->
+        <div class="reward-card">
+          <img src="images/aust.png" alt="AUST" />
+          <h3>AUST</h3>
+          <p>Team : JU_Kaizen</p>
+          <span class="reward-badge onsite-badge"
+            >Ranked <strong>80th</strong></span
+          >
+        </div>
+
+        <!-- Box 4 -->
+        <div class="reward-card">
+          <img src="images/ncpc.png" alt="NCPC" />
+          <h3>NCPC</h3>
+          <p>Team : JU_Waterloo</p>
+          <span class="reward-badge onsite-badge"
+            >Ranked <strong>151st</strong></span
+          >
+        </div>
+      </div>
+    </section>
+    <!-- 🔹 PROJECTS SECTION -->
+    <section id="projects" class="projects-section page-section">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <!-- 🔸 Project 1 -->
+        <div class="project-card">
+          <img src="images/p1.png" alt="Hill Cipher Project" />
+          <a
+            href="https://www.geeksforgeeks.org/hill-cipher/"
+            target="_blank"
+            class="project-link"
+            >Project Link</a
+          >
+        </div>
+
+        <!-- 🔸 Project 2 -->
+        <div class="project-card">
+          <img src="images/p2.png" alt="Expense Tracker Project" />
+          <a
+            href="https://www.geeksforgeeks.org/javascript/build-an-expense-tracker-with-html-css-and-javascript/"
+            target="_blank"
+            class="project-link"
+            >Project Link</a
+          >
+        </div>
+      </div>
+    </section>
+    <section>
+   <!-- 🔹 EDUCATION SECTION: MILESTONE STYLE -->
+<section id="education" class="milestone-education">
+  <h2 class="section-heading">Education</h2>
+  
+  <div class="milestone-container">
+
+    <!-- 🔸 Milestone 1 -->
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-content">
+        <h3>Jahangirnagar University</h3>
+        <p>BSc in Information Technology</p>
+        <span>2020 - Present</span>
+      </div>
+    </div>
+
+    <!-- 🔸 Milestone 2 -->
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-content">
+        <h3>Adamjee Cantonment College</h3>
+        <p>HSC, Science</p>
+        <span>2018 - 2020</span>
+      </div>
+    </div>
+
+    <!-- 🔸 Milestone 3 -->
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-content">
+        <h3>Bhashantek High School</h3>
+        <p>SSC, Science</p>
+        <span>2016 - 2018</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="certification" class="certification-section">
+  <h2 class="section-title">Certifications</h2>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <img src="images/ynw.png" alt="YouKn0wWho Academy" />
+      <a
+        href="https://youkn0wwho.academy/verify/S3MAJVD7RQ"
+        class="cert-link"
+        target="_blank"
+        >YouKn0wWho Academy</a
+      >
+    </div>
+  </div>
+</section>
+<!-- Contact -->
+<section>
+  <div id="contact">
+    <div class="container">
+      <h2 class="section-title">
+        <i class=""></i> Reach Me
+      </h2>
+
+
+      <div class="row">
+        <div class="contact-left">
+          <p>
+            <i class="fa-solid fa-paper-plane"></i>cpp.sayem@gmail.com
+          </p>
+          <p><i class="fa-solid fa-phone"></i>01604421423</p>
+  
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sayem19rony/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/abusayem.rony.7" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://github.com/SAyEM-16" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+          
+          <a href="images/mycv.pdf" download class="btn btn2"
+            >Download Resume</a
+          >
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="Email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="Message"
+              rows="6"
+              placeholder="Your Message"
+            ></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
